@@ -1,7 +1,7 @@
 syntax="proto3";
 package service;
 import "userModel.proto";
-option go_package ="./;proto";
+option go_package ="./;protos";
 message UserRequest{
   // @inject_tag: json:"user_name" form:"user_name" uri:"username"
   string UserName=1;
