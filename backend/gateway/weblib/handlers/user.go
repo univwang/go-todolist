@@ -9,6 +9,7 @@ import (
 )
 
 // 用户注册
+
 func UserRegister(ginCtx *gin.Context) {
 	var userReq service.UserRequest
 	PanicIfUserError(ginCtx.Bind(&userReq))
@@ -20,6 +21,7 @@ func UserRegister(ginCtx *gin.Context) {
 }
 
 // 用户登录
+
 func UserLogin(ginCtx *gin.Context) {
 	var userReq service.UserRequest
 	PanicIfUserError(ginCtx.Bind(&userReq))
