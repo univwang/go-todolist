@@ -11,8 +11,9 @@ func InitMiddleware(service []interface{}) gin.HandlerFunc {
 	return func(context *gin.Context) {
 		// 将实例存在gin.Keys中
 		context.Keys = make(map[string]interface{})
+
 		context.Keys["userService"] = service[0]
-		//context.Keys["taskService.proto"] = service[1]
+		context.Keys["taskService"] = service[1]
 		context.Next()
 	}
 }

@@ -37,7 +37,6 @@ func main() {
 		web.Address("127.0.0.1:4000"),
 		//将服务调用实例使用gin处理
 		web.Handler(weblib.NewRouter(userService, taskService)),
-		web.Handler(weblib.NewRouter(userService)),
 		web.Registry(etcdReg),
 		web.RegisterTTL(time.Second*30),
 		web.RegisterInterval(time.Second*15),
